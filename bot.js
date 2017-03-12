@@ -22,7 +22,7 @@ function respond() {
 
 function postMessage(msg) {
     var num = Math.random(); 
-    var prob = 200;
+    var prob = 2.5;
     if (num < prob/100) {
     var botResponse, options, body, botReq;
        var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'FUCK HARVARD!', 'BOW WOW WOW DOWN TO ME!');
