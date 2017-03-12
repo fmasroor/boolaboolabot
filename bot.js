@@ -5,25 +5,16 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/koosl guy$/;
-
+      //botRegex = /^\/koosl guy$/;
+  var num=Math.random();
   //if(request.text && botRegex.test(request.text)) {
-  //if(Math.random() < 2){
+  if(num < 2){
   if(request.text){
     this.res.writeHead(200);
-    postMessage(request.text);
-    this.res.end();
-  } else {
-   console.log("don't care");
-   this.res.writeHead(200);
-    this.res.end();
- }
-}
+    
+    var botResponse, options, body, botReq;
 
-function postMessage(msg) {
-  var botResponse, options, body, botReq;
-
-  botResponse = cool() + ' ' + msg + ' ' + Math.random(); 
+  botResponse = cool() + ' ' + request.text + ' ' + Math.random(); 
 
   options = {
     hostname: 'api.groupme.com',
@@ -53,7 +44,14 @@ function postMessage(msg) {
     console.log('timeout posting message '  + JSON.stringify(err));
   });
   botReq.end(JSON.stringify(body));
+    this.res.end();
+    
+    
+    
+  } 
+  }
 }
+
 
 
 exports.respond = respond;
