@@ -11,7 +11,7 @@ function respond() {
   //if(Math.random() < 2){
   if(request.text){
     this.res.writeHead(200);
-    postMessage();
+    postMessage(request.text);
     this.res.end();
   } else {
    console.log("don't care");
@@ -20,10 +20,10 @@ function respond() {
  }
 }
 
-function postMessage() {
+function postMessage(msg) {
   var botResponse, options, body, botReq;
 
-  botResponse = cool() + ' ' + botID + ' ' + Math.random(); 
+  botResponse = cool() + ' ' + msg + ' ' + Math.random(); 
 
   options = {
     hostname: 'api.groupme.com',
