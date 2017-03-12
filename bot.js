@@ -23,7 +23,7 @@ function respond() {
 function postMessage(msg) {
     var botResponse, options, body, botReq;
     var num = Math.random();
-    botResponse = cool() + ' ' + msg + ' ' + num;
+    botResponse = cool() + ' ' + msg + ' ' + num + 'K';
 
     options = {
         hostname: 'api.groupme.com',
