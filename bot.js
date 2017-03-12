@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
     var request = JSON.parse(this.req.chunks[0]),
-        //botRegex = /^\/koosl guy$/;
+        botRegex = /^\/koosl guy$/;
 
     //if(request.text && botRegex.test(request.text)) {
     //if(Math.random() < 2){
@@ -22,13 +22,9 @@ function respond() {
 
 function postMessage(msg) {
     var botResponse, options, body, botReq;
-    //var num = Math.random();
-    
-    //if (num < 2.0) {
-    //    botResponse = ' ' + num;
-    //}
-    
-    botResponse = cool() + ' ' + msg + ' K';// + Math.random() + 'K';
+
+    botResponse = cool() + ' ' + msg + ' ' + Math.random();
+
     options = {
         hostname: 'api.groupme.com',
         path: '/v3/bots/post',
