@@ -8,7 +8,8 @@ function respond() {
       botRegex = /^\/koosl guy$/;
 
   //if(request.text && botRegex.test(request.text)) {
-  if(Math.random() < 2){
+  //if(Math.random() < 2){
+  if(request.text)
     this.res.writeHead(200);
     postMessage();
     this.res.end();
