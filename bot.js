@@ -25,7 +25,7 @@ function postMessage(msg) {
     if (num < .01) {
     var botResponse, options, body, botReq;
 
-        botResponse = 'Boola Boola!';
+        botResponse = 'BOOLA BOOLA';
     
 
     options = {
