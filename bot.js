@@ -21,45 +21,53 @@ function respond() {
 }
 
 function postMessage(msg) {
-    var num = Math.random(); 
-    var prob = 1.5;
-    if (num < prob/100) {
-    var botResponse, options, body, botReq;
-       var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'FUCK HARVARD!', 'BOW WOW WOW DOWN TO ME!');
-var botResponse = items[Math.floor(Math.random()*items.length)];
-        //botResponse = 'BOOLA BOOLA!';
-    
+    var botResponse;
 
-    options = {
-        hostname: 'api.groupme.com',
-        path: '/v3/bots/post',
-        method: 'POST'
-    };
+    var options, body, botReq;
+    var expr = "/who'?s a good boy\??/';
+    if (msg.search(expr) != -1) {
+        botResponse = 'I AM!';
+    } else {
+        var num = Math.random();
+        var prob = 200;
+        if (num < prob / 100) {
+            var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'FUCK HARVARD!', 'BOW WOW WOW DOWN TO ME!');
+            var botResponse = items[Math.floor(Math.random() * items.length)];
+            //botResponse = 'BOOLA BOOLA!';
 
-    body = {
-        "bot_id": botID,
-        "text": botResponse
-    };
-
-    console.log('sending ' + botResponse + ' to ' + botID);
-
-    botReq = HTTPS.request(options, function(res) {
-        if (res.statusCode == 202) {
-            //neat
-        } else {
-            console.log('rejecting bad status code ' + res.statusCode);
         }
-    });
+        options = {
+            hostname: 'api.groupme.com',
+            path: '/v3/bots/post',
+            method: 'POST'
+        };
 
-    botReq.on('error', function(err) {
-        console.log('error posting message ' + JSON.stringify(err));
-    });
-    botReq.on('timeout', function(err) {
-        console.log('timeout posting message ' + JSON.stringify(err));
-    });
-    botReq.end(JSON.stringify(body));
+        body = {
+            "bot_id": botID,
+            "text": botResponse
+        };
+
+        console.log('sending ' + botResponse + ' to ' + botID);
+
+        botReq = HTTPS.request(options, function(res) {
+            if (res.statusCode == 202) {
+                //neat
+            } else {
+                console.log('rejecting bad status code ' + res.statusCode);
+            }
+        });
+
+        botReq.on('error', function(err) {
+            console.log('error posting message ' + JSON.stringify(err));
+        });
+        botReq.on('timeout', function(err) {
+            console.log('timeout posting message ' + JSON.stringify(err));
+        });
+        botReq.end(JSON.stringify(body));
     }
-} 
+
+
+}
 
 
 exports.respond = respond;
