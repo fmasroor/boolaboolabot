@@ -22,13 +22,13 @@ function respond() {
 
 function postMessage(msg) {
     var botResponse, options, body, botReq;
-    var num = Math.random();
+    //var num = Math.random();
     
     //if (num < 2.0) {
     //    botResponse = ' ' + num;
     //}
     
-    botResponse = cool() + ' ' + msg + ' ' + num;
+    botResponse = cool() + ' ' + msg + ' ' + Math.random() + 'K';
     options = {
         hostname: 'api.groupme.com',
         path: '/v3/bots/post',
