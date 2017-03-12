@@ -21,8 +21,9 @@ function respond() {
 }
 
 function postMessage(msg) {
-    var num = Math.random();    
-    if (num < .05) {
+    var num = Math.random(); 
+    var prob = 200;
+    if (num < prob/100) {
     var botResponse, options, body, botReq;
        var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'FUCK HARVARD!', 'BOW WOW WOW DOWN TO ME!');
 var botResponse = items[Math.floor(Math.random()*items.length)];
