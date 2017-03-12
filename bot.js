@@ -9,7 +9,7 @@ function respond() {
 
   //if(request.text && botRegex.test(request.text)) {
   //if(Math.random() < 2){
-  if(request.text)
+  if(request.text){
     this.res.writeHead(200);
     postMessage();
     this.res.end();
