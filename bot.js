@@ -21,12 +21,12 @@ function respond() {
 }
 
 function postMessage(msg) {
+    var num = Math.random();    
+    if (num < 2.0) {
     var botResponse, options, body, botReq;
-    var num = Math.random();
-    botResponse = cool() + ' ' + msg + ' ' + num + 'K';
-    if (num < 0.5) {
+
         botResponse = 'Boola Boola!' + num + ' ';
-    }
+    
 
     options = {
         hostname: 'api.groupme.com',
@@ -56,6 +56,7 @@ function postMessage(msg) {
         console.log('timeout posting message ' + JSON.stringify(err));
     });
     botReq.end(JSON.stringify(body));
+    }
 } 
 
 
