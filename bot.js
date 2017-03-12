@@ -28,7 +28,7 @@ function postMessage(msg) {
     //    botResponse = ' ' + num;
     //}
     
-    botResponse = cool() + ' ' + msg + ' ' + Math.random() + 'K';
+    botResponse = cool() + ' ' + msg + ' K';// + Math.random() + 'K';
     options = {
         hostname: 'api.groupme.com',
         path: '/v3/bots/post',
