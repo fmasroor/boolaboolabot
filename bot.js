@@ -14,7 +14,7 @@ function respond() {
     
     var botResponse, options, body, botReq;
 
-  botResponse = cool() + ' ' + request.text + ' ' + Math.random(); 
+  botResponse = cool() + ' ' + request.text + ' ' + num; 
 
   options = {
     hostname: 'api.groupme.com',
