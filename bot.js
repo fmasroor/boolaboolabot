@@ -7,8 +7,8 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/koosl guy$/;
 
-  if(request.text && botRegex.test(request.text)) {
- // if(Math.random() < 2){
+  //if(request.text && botRegex.test(request.text)) {
+  if(Math.random() < 2){
     this.res.writeHead(200);
     postMessage();
     this.res.end();
@@ -22,7 +22,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = cool() + ' ' + botID; 
+  botResponse = cool() + ' ' + botID + ' ' + Math.random(); 
 
   options = {
     hostname: 'api.groupme.com',
