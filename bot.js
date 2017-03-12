@@ -24,8 +24,8 @@ function postMessage(msg) {
     var botResponse, options, body, botReq;
     var num = Math.random();
     botResponse = cool() + ' ' + msg + ' ' + num + 'K';
-    if (num < 2.0) {
-        botResponse = cool();
+    if (num < 0.5) {
+        botResponse = 'Boola Boola!';
     }
 
     options = {
