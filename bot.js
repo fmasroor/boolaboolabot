@@ -24,7 +24,7 @@ function postMessage(msg) {
     var botResponse;
 
     var options, body, botReq;
-    var expr = '/good boy/';
+    var expr = "/good boy/";
     if (msg.search(expr) != -1) {
         botResponse = 'I AM!';
     } else {
