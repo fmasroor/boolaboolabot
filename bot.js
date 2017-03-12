@@ -7,6 +7,8 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/koosl guy$/;
 
+  localStorage.setItem('a',1)
+  
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
@@ -21,7 +23,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = cool() + ' ' + botID;
+  botResponse = cool() + ' ' + botID + ' ' + (parseInt(localStorage.a)+1) ;
 
   options = {
     hostname: 'api.groupme.com',
