@@ -29,14 +29,16 @@ function postMessage(msg) {
 	if (msg.search(/good boy/i) != -1) {
 		botResponse = 'I AM!';
 	} else if(msg.search(/harvard/i) != -1){
-			var items = Array('FUCK CRIMSON!', 'https://www.youtube.com/watch?v=UryWWFVy-ZM', 'Tbh Harvar᠎d was my dream school until I woke up');
+			var items = Array('FUCK HARV⁣ARD', 'https://www.youtube.com/watch?v=UryWWFVy-ZM', 'Tbh Harvar᠎d was my dream school until I woke up');
 		botResponse = items[Math.floor(Math.random() * items.length)]; //watch out for the mongolian space separator in the Harvard was my dream school line
 		
 		
 	} else if(msg.search(/cornell/i) != -1){
-		botResponse = 'FAKE IVY';
+		botResponse = 'CORNEL⁣L IS A FAKE IVY';
 	} else if(msg.search(/princeton/i) != -1){
-		botResponse = 'RIP NORMAN (NOT REALLY THO)';
+		var items = Array('FUCK PRINCE⁣TON', 'RIP NORMAN (NOT REALLY THO');
+		botResponse = items[Math.floor(Math.random() * items.length)]; //watch out for the mongolian space separator in the Harvard was my dream school line
+		
 	}
 	else{
 		var num = Math.random();
