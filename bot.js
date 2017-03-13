@@ -26,7 +26,9 @@ function postMessage(msg) {
 		var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME! ~Mami');
 		botResponse = items[Math.floor(Math.random() * items.length)]; 
 	} else if (msg.search(/meme/i) != -1) {
-		var items = Array('http://i.imgur.com/UrfYeeL.jpg', 'http://i.imgur.com/eNQuSjk.jpg', 'http://i.imgur.com/QYUxcox.jpg');
+		var items = Array('http://i.imgur.com/UrfYeeL.jpg', 
+				  'http://i.imgur.com/eNQuSjk.jpg', 
+				  'http://i.imgur.com/QYUxcox.jpg');
 		botResponse = items[Math.floor(Math.random() * items.length)];
 		meme = 1;
 	}  else if (msg.search(/good boy/i) != -1) {
@@ -73,14 +75,16 @@ function postMessage(msg) {
 	}
 	else {
 		body = {
-			"bot_id": botID,
-			"attachments" : [
-			{
-				"type" : "image",
-				"url" : botResponse;
-			}
-				]
-			};
+  "bot_id"  : botID,
+  "text"    : "",
+  "attachments" : [
+    {
+      "type"  : "image",
+      "url"   : botResponse
+    }
+  ]
+};
+
 	}
 	console.log('sending ' + botResponse + ' to ' + botID);
 	
