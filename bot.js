@@ -24,7 +24,7 @@ function postMessage(msg) {
 	meme = 0;
 	if(msg.search(/yale/i) != -1){
 		var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME! ~Mami');
-		botResponse = items[Math.floor(Math.random() * items.length)]; //watch out for the mongolian space separator in the Harvard was my dream school line
+		botResponse = items[Math.floor(Math.random() * items.length)]; 
 	} else if (msg.search(/meme/i) != -1) {
 		var items = Array('http://i.imgur.com/UrfYeeL.jpg', 'http://i.imgur.com/eNQuSjk.jpg', 'http://i.imgur.com/QYUxcox.jpg');
 		botResponse = items[Math.floor(Math.random() * items.length)];
@@ -37,18 +37,19 @@ function postMessage(msg) {
 	} else if(msg.search(/harvard/i) != -1){
 			var items = Array('FUCK HARV⁣ARD', 'https://www.youtube.com/watch?v=UryWWFVy-ZM', 
 		'Tbh Harvar᠎d was my dream school until I woke up', 'https://www.youtube.com/watch?v=T4kai4FL0MQ');
-		botResponse = items[Math.floor(Math.random() * items.length)]; //watch out for the mongolian space separator in the Harvard was my dream school line
+		botResponse = items[Math.floor(Math.random() * items.length)]; 
+		//watch out for the mongolian space separator in the Harvard was my dream school line
 		
 		
 	} else if(msg.search(/cornell/i) != -1){
 		botResponse = 'CORNEL⁣L IS A FAKE IVY';
 	} else if(msg.search(/princeton/i) != -1){
 		var items = Array('FUCK PRINCE⁣TON', 'RIP NORMAN (NOT REALLY THO');
-		botResponse = items[Math.floor(Math.random() * items.length)]; //watch out for the mongolian space separator in the Harvard was my dream school line
+		botResponse = items[Math.floor(Math.random() * items.length)]; 
 		
 	} else if(msg.search(/UPenn/i) != -1){
 		var items = Array('Wait UPenn is an ivy?');
-		botResponse = items[Math.floor(Math.random() * items.length)]; //watch out for the mongolian space separator in the Harvard was my dream school line
+		botResponse = items[Math.floor(Math.random() * items.length)]; 
 	}
 	
 	else{
@@ -79,7 +80,7 @@ function postMessage(msg) {
 				"url" : botResponse;
 			}
 				]
-			}
+			};
 	}
 	console.log('sending ' + botResponse + ' to ' + botID);
 	
