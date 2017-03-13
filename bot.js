@@ -20,13 +20,15 @@ function postMessage(msg) {
 	var botResponse;
 	
 	var options, body, botReq;
-	
+	var meme;
+	meme = 0;
 	if(msg.search(/yale/i) != -1){
 		var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME! ~Mami');
 		botResponse = items[Math.floor(Math.random() * items.length)]; //watch out for the mongolian space separator in the Harvard was my dream school line
 	} else if (msg.search(/meme/i) != -1) {
 		var items = Array('http://i.imgur.com/UrfYeeL.jpg', 'http://i.imgur.com/eNQuSjk.jpg', 'http://i.imgur.com/QYUxcox.jpg');
 		botResponse = items[Math.floor(Math.random() * items.length)];
+		meme = 1;
 	}  else if (msg.search(/good boy/i) != -1) {
 		botResponse = 'I AM!';
 	} else if (msg.search(/hey dan/i) != -1) {
@@ -62,12 +64,23 @@ function postMessage(msg) {
 		path: '/v3/bots/post',
 		method: 'POST'
 	};
-	
+	if(meme == 0){
 	body = {
 		"bot_id": botID,
 		"text": botResponse
 	};
-	
+	}
+	else {
+		body = {
+			"bot_id": botID,
+			"attachments" : [
+			{
+				"type" : "image",
+				"url" : botResponse;
+			}
+				]
+			}
+	}
 	console.log('sending ' + botResponse + ' to ' + botID);
 	
 	botReq = HTTPS.request(options, function(res) {
