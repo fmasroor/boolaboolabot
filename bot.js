@@ -27,7 +27,7 @@ function postMessage(msg) {
 	if (msg.search(/good boy/i) != -1) {
 		botResponse = 'I AM!';
 	} else if(msg.search(/harvard/i) != -1){
-			var items = Array('FUCK CRIMSON!', 'https://www.youtube.com/watch?v=UryWWFVy-ZM', 'Tbh Harvard was my dream school until I woke up');
+			var items = Array('FUCK CRIMSON!', 'https://www.youtube.com/watch?v=UryWWFVy-ZM', 'Tbh Harvar᠎d was my dream school until I woke up');
 		 botResponse = items[Math.floor(Math.random() * items.length)];
 		
 	} else if(msg.search(/cornell/i) != -1){
