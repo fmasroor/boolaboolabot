@@ -11,7 +11,7 @@ function respond() {
 	//if(Math.random() < 2){
 	if (request.text) {
 		this.res.writeHead(200);
-		postMessage(request);
+		postMessage(request.text);
 		this.res.end();
 	} else {
 		console.log("don't care");
@@ -25,8 +25,8 @@ function postMessage(msg) {
 	
 	var options, body, botReq;
 	
-	if(1 == 1) botResponse = msg;
-	else if (msg.search(/good boy/i) != -1) {
+	
+	if (msg.search(/good boy/i) != -1) {
 		botResponse = 'I AM!';
 	} else if(msg.search(/harvard/i) != -1){
 			var items = Array('FUCK CRIMSON!', 'https://www.youtube.com/watch?v=UryWWFVy-ZM', 'Tbh Harvar᠎d was my dream school until I woke up');
