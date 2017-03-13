@@ -4,11 +4,7 @@ var cool = require('cool-ascii-faces');
 var botID = process.env.BOT_ID;
 
 function respond() {
-	var request = JSON.parse(this.req.chunks[0]),
-	botRegex = /^\/koosl guy$/;
-	
-	//if(request.text && botRegex.test(request.text)) {
-	//if(Math.random() < 2){
+	var request = JSON.parse(this.req.chunks[0]);
 	if (request.text) {
 		this.res.writeHead(200);
 		postMessage(request.text);
@@ -45,11 +41,8 @@ function postMessage(msg) {
 		var prob = 1.5;
 		if (num < prob / 100) {
 			var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME!');
-			botResponse = items[Math.floor(Math.random() * items.length)];
-			//botResponse = 'BOOLA BOOLA!';
-			
+			botResponse = items[Math.floor(Math.random() * items.length)];	
 		}
-		
 	}
 	options = {
 		hostname: 'api.groupme.com',
@@ -80,9 +73,4 @@ function postMessage(msg) {
 	});
 	botReq.end(JSON.stringify(body));
 }
-
-
-
-
-
 exports.respond = respond;
