@@ -25,12 +25,15 @@ function postMessage(msg) {
 	
 	var options, body, botReq;
 	if (msg.search(/good boy/i) != -1) {
-		botResponse = 'I AM!';
-	} else {
+		botResponse = 'I\'M A GOOD BOY!';
+	} else if(msg.search(/harvard/i) != -1){
+		botResponse = 'FUCK HARVARD!';
+	}
+	else{
 		var num = Math.random();
 		var prob = 1.5;
 		if (num < prob / 100) {
-			var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'FUCK HARVARD!', 'BOW WOW WOW DOWN TO ME!');
+			var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME!');
 			var botResponse = items[Math.floor(Math.random() * items.length)];
 			//botResponse = 'BOOLA BOOLA!';
 			
