@@ -25,9 +25,9 @@ function postMessage(msg) {
 	
 	var options, body, botReq;
 	if (msg.search(/good boy/i) != -1) {
-		botResponse = 'I\'M A GOOD BOY!';
+		botResponse = 'I AM!';
 	} else if(msg.search(/harvard/i) != -1){
-		botResponse = 'FUCK HARVARD!';
+		botResponse = 'FUCK CRIMSON!';
 	}
 	else{
 		var num = Math.random();
