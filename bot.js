@@ -21,9 +21,17 @@ function postMessage(msg) {
 	
 	var options, body, botReq;
 	
-	
-	if (msg.search(/good boy/i) != -1) {
+	if(msg.search(/yale/i) != -1){
+		var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME! ~Mami');
+		botResponse = items[Math.floor(Math.random() * items.length)]; //watch out for the mongolian space separator in the Harvard was my dream school line
+	} else if (msg.search(/meme/i) != -1) {
+		var items = Array('http://i.imgur.com/UrfYeeL.jpg', 'http://i.imgur.com/eNQuSjk.jpg', 'http://i.imgur.com/QYUxcox.jpg');
+		botResponse = items[Math.floor(Math.random() * items.length)];
+	}  else if (msg.search(/good boy/i) != -1) {
 		botResponse = 'I AM!';
+	} else if (msg.search(/hey dan/i) != -1) {
+		var items = Array('HELLO FRIEND!', 'HELLO YALIE!');
+		botResponse = items[Math.floor(Math.random() * items.length)];
 	} else if(msg.search(/harvard/i) != -1){
 			var items = Array('FUCK HARV⁣ARD', 'https://www.youtube.com/watch?v=UryWWFVy-ZM', 
 		'Tbh Harvar᠎d was my dream school until I woke up', 'https://www.youtube.com/watch?v=T4kai4FL0MQ');
@@ -36,10 +44,14 @@ function postMessage(msg) {
 		var items = Array('FUCK PRINCE⁣TON', 'RIP NORMAN (NOT REALLY THO');
 		botResponse = items[Math.floor(Math.random() * items.length)]; //watch out for the mongolian space separator in the Harvard was my dream school line
 		
+	} else if(msg.search(/UPenn/i) != -1){
+		var items = Array('Wait UPenn is an ivy?');
+		botResponse = items[Math.floor(Math.random() * items.length)]; //watch out for the mongolian space separator in the Harvard was my dream school line
 	}
+	
 	else{
 		var num = Math.random();
-		var prob = 1.5;
+		var prob = 2.5;
 		if (num < prob / 100) {
 			var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME!');
 			botResponse = items[Math.floor(Math.random() * items.length)];	
