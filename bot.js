@@ -28,6 +28,10 @@ function postMessage(msg) {
 		botResponse = 'I AM!';
 	} else if(msg.search(/harvard/i) != -1){
 		botResponse = 'FUCK CRIMSON!';
+	} else if(msg.search(/cornell/i) != -1){
+		botResponse = 'FAKE IVY';
+	} else if(msg.search(/princeton/i) != -1){
+		botResponse = 'RIP NORMAN (NOT REALLY THO)';
 	}
 	else{
 		var num = Math.random();
