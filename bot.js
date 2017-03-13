@@ -11,7 +11,7 @@ function respond() {
 	//if(Math.random() < 2){
 	if (request.text) {
 		this.res.writeHead(200);
-		postMessage(request.text);
+		postMessage(request);
 		this.res.end();
 	} else {
 		console.log("don't care");
@@ -24,12 +24,14 @@ function postMessage(msg) {
 	var botResponse;
 	
 	var options, body, botReq;
-	if (msg.search(/good boy/i) != -1) {
+	
+	if(1 == 1) botResponse = msg;
+	else if (msg.search(/good boy/i) != -1) {
 		botResponse = 'I AM!';
 	} else if(msg.search(/harvard/i) != -1){
 			var items = Array('FUCK CRIMSON!', 'https://www.youtube.com/watch?v=UryWWFVy-ZM', 'Tbh Harvar᠎d was my dream school until I woke up');
-		 //botResponse = items[Math.floor(Math.random() * items.length)];
-		botResponse = items[2];
+		botResponse = items[Math.floor(Math.random() * items.length)]; //watch out for the mongolian space separator in the Harvard was my dream school line
+		
 		
 	} else if(msg.search(/cornell/i) != -1){
 		botResponse = 'FAKE IVY';
