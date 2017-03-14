@@ -31,7 +31,6 @@ function postMessage(msg) {
 				 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
 				 'https://www.youtube.com/watch?list=PL7XlqX4npddfrdpMCxBnNZXg2GFll7t5y&v=q6EoRBvdVPQ');
 		botResponse = items[Math.floor(Math.random() * items.length)];
-		meme = 1;
 	} else if (msg.search(/meme/i) != -1) {
 		var items = Array('http://i.imgur.com/UrfYeeL.jpg', 
 				  'http://i.imgur.com/eNQuSjk.jpg', 
