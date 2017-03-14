@@ -43,7 +43,7 @@ function postMessage(msg) {
 		meme = 1;
 	}  else if (msg.search(/good boy/i) != -1) {
 		botResponse = 'I AM!';
-	} else if (msg.search(/hey dan/i) != -1 || msg.search(/hi dan/i) != -1) {
+	} else if (msg.search(/hey dan/i) != -1) { // || msg.search(/hi dan/i) != -1
 		var items = Array('HELLO FRIEND!', 'HELLO YALIE!');
 		botResponse = items[Math.floor(Math.random() * items.length)];
 	}  else if (msg.search(/financial aid/i) != -1) {
