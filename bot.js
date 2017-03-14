@@ -25,17 +25,25 @@ function postMessage(msg) {
 	if(msg.search(/yale/i) != -1){
 		var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME! ~Mami');
 		botResponse = items[Math.floor(Math.random() * items.length)]; 
-	} else if (msg.search(/meme/i) != -1) {
+	} else if (msg.search(/dank meme/i) != -1) {
+		var items = Array('https://www.youtube.com/watch?v=zvq9r6R6QAY', 
+				 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+				 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+				 'https://www.youtube.com/watch?list=PL7XlqX4npddfrdpMCxBnNZXg2GFll7t5y&v=q6EoRBvdVPQ');
+		botResponse = items[Math.floor(Math.random() * items.length)];
+		meme = 1;
+	}else if (msg.search(/meme/i) != -1) {
 		var items = Array('http://i.imgur.com/UrfYeeL.jpg', 
 				  'http://i.imgur.com/eNQuSjk.jpg', 
 				  'http://i.imgur.com/QYUxcox.jpg',
 				  'http://i.imgur.com/HW9S0bU.jpg',
-				  'http://i.imgur.com/TZAtvVd.jpg');
+				  'http://i.imgur.com/TZAtvVd.jpg',
+				 'http://i.imgur.com/wsmDrml.jpg');
 		botResponse = items[Math.floor(Math.random() * items.length)];
 		meme = 1;
 	}  else if (msg.search(/good boy/i) != -1) {
 		botResponse = 'I AM!';
-	} else if (msg.search(/hey dan/i) != -1) {
+	} else if (msg.search(/hey dan/i) != -1 || msg.search(/hi dan/i) != -1) {
 		var items = Array('HELLO FRIEND!', 'HELLO YALIE!');
 		botResponse = items[Math.floor(Math.random() * items.length)];
 	}  else if (msg.search(/financial aid/i) != -1) {
@@ -53,7 +61,11 @@ function postMessage(msg) {
 	} else if(msg.search(/princeton/i) != -1){
 		var items = Array('FUCK PRINCE⁣TON', 'RIP NORMAN (NOT REALLY THO');
 		botResponse = items[Math.floor(Math.random() * items.length)]; 
-		
+	else if(msg.search(/duke/i) != -1){
+		var items = Array('http://i.imgur.com/eiowTLm.jpg');
+		botResponse = items[Math.floor(Math.random() * items.length)]; 
+		meme = 1;
+	}	
 	} else if(msg.search(/UPenn/i) != -1){
 		var items = Array('Wait UPenn is an ivy?');
 		botResponse = items[Math.floor(Math.random() * items.length)]; 
