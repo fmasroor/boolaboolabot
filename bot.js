@@ -32,7 +32,7 @@ function postMessage(msg) {
 				 'https://www.youtube.com/watch?list=PL7XlqX4npddfrdpMCxBnNZXg2GFll7t5y&v=q6EoRBvdVPQ');
 		botResponse = items[Math.floor(Math.random() * items.length)];
 		meme = 1;
-	}else if (msg.search(/meme/i) != -1) {
+	} else if (msg.search(/meme/i) != -1) {
 		var items = Array('http://i.imgur.com/UrfYeeL.jpg', 
 				  'http://i.imgur.com/eNQuSjk.jpg', 
 				  'http://i.imgur.com/QYUxcox.jpg',
@@ -61,17 +61,14 @@ function postMessage(msg) {
 	} else if(msg.search(/princeton/i) != -1){
 		var items = Array('FUCK PRINCE⁣TON', 'RIP NORMAN (NOT REALLY THO');
 		botResponse = items[Math.floor(Math.random() * items.length)]; 
-	else if(msg.search(/duke/i) != -1){
+	} else if(msg.search(/duke/i) != -1){
 		var items = Array('http://i.imgur.com/eiowTLm.jpg');
 		botResponse = items[Math.floor(Math.random() * items.length)]; 
 		meme = 1;
-	}	
 	} else if(msg.search(/UPenn/i) != -1){
 		var items = Array('Wait UPenn is an ivy?');
 		botResponse = items[Math.floor(Math.random() * items.length)]; 
-	}
-	
-	else{
+	} else{
 		var num = Math.random();
 		var prob = 2.5;
 		if (num < prob / 100) {
