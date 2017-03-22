@@ -75,6 +75,7 @@ function postMessage(msg) {
 			botResponse = items[Math.floor(Math.random() * items.length)];	
 		}
 	}
+	botResponse = 'hhhhh';
 	options = {
 		hostname: 'api.groupme.com',
 		path: '/v3/bots/post',
