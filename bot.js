@@ -20,11 +20,17 @@ function respond() {
 
 function postMessage(msg) {
 	var botResponse;
-	
+	var cutoff = 5;
 	var options, body, botReq;
 	var meme;
 	meme = 0;
-	if(msg.search(/yale/i) != -1){
+	if(msg.search(/no dan/i) != -1){ 
+		process.env.COUNT = 0;
+		botResponse = 'Ok, I\'ll be quiet for a bit.';
+	}
+	else if(process.env.COUNT.length < cutoff)
+	{
+	 if(msg.search(/yale/i) != -1){
 		var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME! ~Mami');
 		botResponse = items[Math.floor(Math.random() * items.length)]; 
 	} else if (msg.search(/dank meme/i) != -1) {
@@ -77,8 +83,9 @@ function postMessage(msg) {
 			botResponse = items[Math.floor(Math.random() * items.length)];	
 		}
 	}
+	}
 	process.env.COUNT = process.env.COUNT + 1;
-	botResponse = botID + 'h' + process.env.COUNT;
+
 	options = {
 		hostname: 'api.groupme.com',
 		path: '/v3/bots/post',
