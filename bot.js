@@ -80,13 +80,13 @@ function postMessage(msg) {
                 var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME!');
                 botResponse = items[Math.floor(Math.random() * items.length)];
             }
-		botResponse = 'IJKL';
+
         }
 	    
     }
-	else {botResponse = 'Im quiet rn';}
+
     process.env.COUNT = process.env.COUNT + 1;
-    botResponse = botResponse + ' ' + msg + ' ' + process.env.COUNT;
+
     options = {
         hostname: 'api.groupme.com',
         path: '/v3/bots/post',
