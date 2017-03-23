@@ -28,7 +28,7 @@ function postMessage(msg) {
 		process.env.COUNT = 0;
 		botResponse = 'Ok, I\'ll be quiet for a bit.';
 	}
-	else if(process.env.COUNT.length < cutoff)
+	else if(process.env.COUNT.length > cutoff)
 	{
 	 if(msg.search(/yale/i) != -1){
 		var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME! ~Mami');
