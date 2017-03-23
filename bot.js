@@ -20,7 +20,7 @@ function respond() {
 
 function postMessage(msg) {
     var botResponse;
-    var cutoff = 3;
+    var cutoff = 50;
     var options, body, botReq;
     var meme;
     meme = 0;
@@ -80,9 +80,7 @@ function postMessage(msg) {
                 var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME!');
                 botResponse = items[Math.floor(Math.random() * items.length)];
             }
-
         }
-	    
     }
 
 	//if(botResponse){botResponse = botResopnse + process.env.COUNT;}
