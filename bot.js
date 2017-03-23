@@ -85,7 +85,7 @@ function postMessage(msg) {
 	    
     }
 
-	if(botResponse){botResponse = botResopnse + process.env.COUNT;}
+	//if(botResponse){botResponse = botResopnse + process.env.COUNT;}
 	
     process.env.COUNT = process.env.COUNT + 1;
     options = {
