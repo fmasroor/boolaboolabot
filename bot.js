@@ -20,7 +20,7 @@ function respond() {
 
 function postMessage(msg) {
     var botResponse;
-    var cutoff = 5;
+    var cutoff = 3;
     var options, body, botReq;
     var meme;
     meme = 0;
