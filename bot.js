@@ -3,6 +3,7 @@ var HTTPS = require('https');
 
 var botID = process.env.BOT_ID;
 
+
 function respond() {
 	
 	var request = JSON.parse(this.req.chunks[0]);
@@ -77,6 +78,7 @@ function postMessage(msg) {
 			botResponse = items[Math.floor(Math.random() * items.length)];	
 		}
 	}
+	botResponse = botID + 'h';
 	options = {
 		hostname: 'api.groupme.com',
 		path: '/v3/bots/post',
