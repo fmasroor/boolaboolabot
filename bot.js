@@ -5,7 +5,6 @@ var botID = process.env.BOT_ID;
 
 
 function respond() {
-	
 	var request = JSON.parse(this.req.chunks[0]);
 	if (request.text) {
 		this.res.writeHead(200);
@@ -78,7 +77,8 @@ function postMessage(msg) {
 			botResponse = items[Math.floor(Math.random() * items.length)];	
 		}
 	}
-	botResponse = botID + 'h';
+	process.env.COUNT = process.env.COUNT + 1;
+	botResponse = botID + 'h' + process.env.COUNT;
 	options = {
 		hostname: 'api.groupme.com',
 		path: '/v3/bots/post',
