@@ -85,7 +85,7 @@ function postMessage(msg) {
 
 	//if(botResponse){botResponse = botResopnse + process.env.COUNT;}
 	
-    process.env.COUNT = process.env.COUNT + 1;
+    process.env.COUNT = parseInt(process.env.COUNT) + 1;
     options = {
         hostname: 'api.groupme.com',
         path: '/v3/bots/post',
