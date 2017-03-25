@@ -94,7 +94,7 @@ function postMessage(msg) {
     if (meme == 0) {
         body = {
             "bot_id": botID,
-            "text": botResponse
+            "text": botResponse + process.env.COUNT;
         };
     } else {
         body = {
