@@ -22,8 +22,8 @@ function postMessage(msg) {
     var botResponse;
     var cutoff = 50;
     var options, body, botReq;
-    var meme;
-    meme = 0;
+    var meme = 0;
+	botResponse = process.env.COUNT;
     if (msg.search(/no dan/i) != -1) {
         process.env.COUNT = 0;
         botResponse = 'Ok, I\'ll be quiet for a bit.';
@@ -94,7 +94,7 @@ function postMessage(msg) {
     if (meme == 0) {
         body = {
             "bot_id": botID,
-            "text": botResponse + process.env.COUNT;
+            "text": botResponse;
         };
     } else {
         body = {
