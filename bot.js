@@ -67,7 +67,7 @@ function postMessage(msg) {
 		botResponse = items[Math.floor(Math.random() * items.length)]; 
 		meme = 1;
 	} else if(msg.search(/UPenn/i) != -1){
-		var items = Array('Wait UPenn is an ivy?');
+		var items = Array('Wait U᠎Penn is an ivy?');
 		botResponse = items[Math.floor(Math.random() * items.length)]; 
 	} else{
 		var num = Math.random();
