@@ -33,7 +33,7 @@ function postMessage(msg) {
 				 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
 				 'https://www.youtube.com/watch?list=PL7XlqX4npddfrdpMCxBnNZXg2GFll7t5y&v=q6EoRBvdVPQ');
 		botResponse = items[Math.floor(Math.random() * items.length)];
-	} else if (msg.search(/meme/) != -1) {
+	} else if (msg.search(/meme please/) != -1) {
 		var items = Array('https://i.groupme.com/960x652.jpeg.fbc9631c60f7459186faa2d29b094ac2', 
 				  'https://i.groupme.com/713x632.jpeg.5dcff2a5d961430d8d85600bc2cdcbdf', 
 				  'https://i.groupme.com/926x666.jpeg.418f120a8f66446aad12faa9a3837b97',
