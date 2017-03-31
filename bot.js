@@ -24,10 +24,7 @@ function postMessage(msg) {
 	var options, body, botReq;
 	var meme;
 	meme = 0;
-	if(msg.search(/yale/i) != -1){
-		var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME! ~Mami');
-		botResponse = items[Math.floor(Math.random() * items.length)]; 
-	} else if (msg.search(/dank meme/i) != -1) {
+	if (msg.search(/dank meme/i) != -1) {
 		var items = Array('https://www.youtube.com/watch?v=zvq9r6R6QAY', 
 				 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
 				 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
