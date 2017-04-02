@@ -68,9 +68,9 @@ function postMessage(msg) {
 		botResponse = items[Math.floor(Math.random() * items.length)]; 
 	} else{
 		var num = Math.random();
-		var prob = 2.5;
+		var prob = 1.75;
 		if (num < prob / 100) {
-			var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'BOW WOW WOW DOWN TO ME!');
+			var items = Array('BOOLA BOOLA!', 'BOW WOW WOW!', 'GO BULLDOGS!', 'LONG LIVE MEME TEAM');
 			botResponse = items[Math.floor(Math.random() * items.length)];	
 		}
 	}
