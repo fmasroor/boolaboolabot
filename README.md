@@ -1,4 +1,5 @@
 # Sample GroupMe NodeJS Callback Bot
+# Copied off the Internet :p
 
 ## Introduction
 
